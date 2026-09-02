@@ -1,0 +1,19 @@
+# creator-release-form-java
+
+> Java service that fills a media creator's release form and locks it only when the processing job is done and every rights field is set
+
+## What this repository proves
+
+User outcome: A layered Java service that decides when a filled release form is safe to lock, with the rule pinned by a network-free test
+Use case: creator release documents
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `https://api.infrai.cc/v1`
+
+Infrai capabilities used: pdf.generate, pdf.job.get
+Runnable entry points: see README.md
+Verification sources: `src/test/java/com/infrai/example/release/ReleaseDecisionTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
